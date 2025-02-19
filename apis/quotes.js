@@ -1,5 +1,4 @@
 // for Quotes API
-
 import { API_KEY_UNSPLASH } from "../config.js";
 
 const API_KEY = API_KEY_UNSPLASH;
