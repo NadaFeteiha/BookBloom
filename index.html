@@ -4,15 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookBloom</title>
+    <title>Book Bloom </title>
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-    <script src="./index.js" defer></script>
+    <!-- Scripts -->
+    <script type="module" src="./config.js" defer></script>
+    <script type="module" src="./apis/quotes.js" defer></script>
+    <script type="module" src="./index.js" defer></script>
 </head>
 
 <body>
-    <h1> BookBloom </h1>
+    <nav>
+        <div class="logo">
+            <img src="./resources/Book Bloom.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="./pages/explore.html">Explore</a></li>
+            <li><a href="./pages/explore.html">Shop</a></li>
+            <li><a href="./pages/Kids.html">Kids</a></li>
+        </ul>
+        <div class="login">Login</a></div>
+    </nav>
+
+    <img id="quote" alt="quote" class="quote">
+
 </body>
 
 </html>
