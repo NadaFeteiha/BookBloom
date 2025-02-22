@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- Scripts -->
+    <script type="module" src="./resources/DB.js"></script>
     <script type="module" src="./config.js" defer></script>
     <script type="module" src="./apis/quotes.js" defer></script>
     <script type="module" src="./index.js" defer></script>
@@ -24,12 +25,18 @@
             <li><a href="./pages/explore.html">Shop</a></li>
             <li><a href="./pages/Kids.html">Kids</a></li>
         </ul>
-        <div class="login">Login</a></div>
+        <div id="wishList" class="login"><a>WishList</a></div>
     </nav>
 
-    <img id="quote" alt="quote" class="quote">
-
-    <div id="best-books">
+    <div id="home">
+        <img id="quote" alt="quote" class="quote">
+        <div id="best-books">
+        </div>
+    </div>
+    <div id="wishList-books">
+        <h1>Wish List</h1>
+        <div id="wish-list">
+        </div>
     </div>
 </body>
 

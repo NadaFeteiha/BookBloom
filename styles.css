@@ -208,13 +208,9 @@ nav {
     border: none;
     padding: 5px;
     cursor: pointer;
+    position: relative;
 }
 
-.btn-wishlist img {
-    height: 60px;
-    width: 60px;
-    object-fit: contain;
-    position: relative;
-    top: -30px;
-    right: -100px;
+.btn-wishlist:hover {
+    color: green;
 }

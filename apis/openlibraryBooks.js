@@ -1,6 +1,7 @@
 // archive API
+import { setBooks } from "./DB.js";
 
-async function searchBooks(query, limit = 10) {
+async function searchBooks(query, limit = 40) {
     console.log("************** Fetching books...", query);
     const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=${limit}`
     try {
@@ -19,7 +20,6 @@ async function searchBooks(query, limit = 10) {
     }
 }
 
-
 const button = document.getElementById("search-btn");
 
 button.addEventListener("click", async () => {
@@ -32,35 +32,4 @@ button.addEventListener("click", async () => {
     const books = await searchBooks(query);
     setBooks(books);
 });
-
-
-function setBooks(listBooks) {
-    console.log("%%%%%%%%%%%%%%%%% set books...", listBooks);
-    const bookList = document.getElementById("books");
-    bookList.replaceChildren();
-
-    listBooks.forEach(book => {
-        const card = document.createElement("div");
-        card.classList.add("book-card");
-
-        const img = document.createElement("img");
-        img.src = book.cover;
-        img.alt = book.title;
-        img.classList.add("book-cover");
-        card.appendChild(img);
-
-        const title = document.createElement("p");
-        title.textContent = book.title;
-        card.appendChild(title);
-
-
-        const btnSave = document.createElement("button");
-        btnSave.classList.add("btn-wishlist");
-        btnSave.innerHTML = '<img src="../resources/save.svg" alt="Save">';
-        card.appendChild(btnSave);
-
-        bookList.appendChild(card);
-    });
-}
-
 
