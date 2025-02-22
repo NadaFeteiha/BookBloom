@@ -122,10 +122,8 @@ nav {
     white-space: nowrap;
 }
 
-
 /* Search */
 
-/* Search Container */
 .search-container {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -174,4 +172,49 @@ nav {
     justify-content: center;
     gap: 15px;
     padding: 20px;
+}
+
+.book-card {
+    background-color: #faf1f1;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card p {
+    color: var(--book_brown);
+    max-width: 180px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book-card img {
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    align-items: center;
+    object-fit: cover;
+}
+
+.btn-wishlist {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn-wishlist img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    position: relative;
+    top: -30px;
+    right: -100px;
 }

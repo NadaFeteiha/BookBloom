@@ -40,9 +40,27 @@ function setBooks(listBooks) {
     bookList.replaceChildren();
 
     listBooks.forEach(book => {
+        const card = document.createElement("div");
+        card.classList.add("book-card");
+
+        const img = document.createElement("img");
+        img.src = book.cover;
+        img.alt = book.title;
+        img.classList.add("book-cover");
+        card.appendChild(img);
+
         const title = document.createElement("p");
         title.textContent = book.title;
+        card.appendChild(title);
 
-        bookList.appendChild(title);
+
+        const btnSave = document.createElement("button");
+        btnSave.classList.add("btn-wishlist");
+        btnSave.innerHTML = '<img src="../resources/save.svg" alt="Save">';
+        card.appendChild(btnSave);
+
+        bookList.appendChild(card);
     });
 }
+
+
